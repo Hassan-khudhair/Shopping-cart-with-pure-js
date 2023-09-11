@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.c-red {
+    color: red;
+}
+
+header {
+    background-color: #2A3439;
+    padding: 10px 0;
+
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content .brand {
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.header-content nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-content nav ul li {
+    padding: 0 20px;
+    position: relative;
+}
+
+.header-content nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.header-content nav ul li:nth-child(4) a:hover::after{
+    width: 0;
+
+}
+
+.header-content nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 22px;
+    right: 20px;
+    background-color: #B2FFFF;
+    transition: width 0.3s;
+}
+
+.header-content nav ul li a:hover::after {
+    width: 60%;
+}
+
+.header-content nav .user_info li {
+    position: relative;
+    margin: 0 7px;
+}
+
+.header-content nav .user_info li i {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.header-content nav .user_info li i:hover {
+    color: #ddd;
+
+}
+
+.header-content nav .user_info li > span {
+    background-color: crimson;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: -10px;
+    right: 5px;
+    font-size: 10px;
+    color: #fff;
+    line-height: 20px;
+    display: none;
+}
+
+.header-content nav .user_info li .carts-products {
+    position: absolute;
+    width: 200px;
+    transform: translate(-42%, 0);
+    background-color: #eaeaea;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 4px;
+    top: 46px;
+    display: none;
+}
+
+.header-content nav .user_info li .carts-products a {
+    display: block;
+    color: #fff;
+    background-color: darkgreen;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* form */
+.sectionForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center;
+    background-color: #162b30;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.sectionForm h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #B2FFFF;
+}
+
+.sectionForm form {}
+
+.sectionForm form input {
+    display: block;
+    font-family: 'oswald', sans-serif;
+    width: 100%;
+    margin: 5px 0;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.sectionForm form input:focus {
+    outline: none;
+    border-bottom: 1px solid #00BFFF;
+    transform: scale(1.02);
+}
+
+.sectionForm form input[type="submit"] {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    height: auto;
+    cursor: pointer;
+}
+
+.sectionForm form input[type="submit"]:hover {
+    background-color: #00BFFF;
+    border: none;
+}
+
+
+
+
+/* style section products  */
+
+.products {
+    width: 70%;
+    margin: 10px 0;
+    float: left;
+}
+
+.product-filter {
+    float: right;
+    width: 25%;
+    margin: 10px 0;
+}
+.product-filter #size-filter{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 50px 12px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: ease-in-out 0.3s;
+}
+.product-filter #size-filter:focus{
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(0, 76, 163, 0.524);
+}
+
+.product-item {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    min-height: 130px;
+}
+
+.porduct-item-img {
+    width: 200px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.product-item-desc {
+    padding: 10px;
+}
+
+.product-item-desc a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-item-action {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1;
+    text-align: right;
+}
+
+.product-item-action .add-to-card {
+    display: block;
+    margin-left: auto;
+    background-color: darkgreen;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+
+.product-item-action .favorite {
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    margin-left: auto;
+}
+
+
+.item-details img {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #333;
+    padding: 2px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+input[type='search'] {
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+}
+
+input[type='search']:focus {
+    outline: 1px solid #00BFFF;
+}
+
+.edit-product{
+    display: block;
+    width: 140px;
+    padding: 7px 15px;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* create new products  */
+.btn-create {
+    position: fixed;
+    bottom: 15px;
+    right: 45px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    line-height: 50px;
+    background-color: #007399;
+    font-size: 25px;
+    color: rgb(208, 255, 0);
+}
+
+
+.create-products {
+}
+
+.create-products form {}
+
+.create-products input ,
+.create-products select {
+    width:100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+}
+.create-products input[type=submit]{
+    background-color: #162b30;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.create-products input:focus,
+.create-products select:focus{
+    outline: none;
+}
+
+.item-qty{
+    width: 15px ;
+    height: 15px ;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    background-color: green;
+    border-radius: 50%;
+    line-height: 15px;
+    font-size: 10px;
+}
+
+
+
+
+
+/* profile page  */
+.user-avatar{
+    width: 250px ;
+    height: 250px;
+    border-radius: 50%;
+    
+}
